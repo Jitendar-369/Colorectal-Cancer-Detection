@@ -12,8 +12,6 @@
 9. [Future Enhancements](#future-enhancements)
 10. [Contributors](#contributors)
 11. [License](#license)
-
-
   
 ---
 
