@@ -11,8 +11,7 @@
 8. [Results](#results)
 9. [Future Enhancements](#future-enhancements)
 10. [Contributors](#contributors)
-11. [License](#lic
-  
+11. [License](#
 ---
 
 ## Introduction
