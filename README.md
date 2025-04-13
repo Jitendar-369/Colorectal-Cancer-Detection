@@ -1,54 +1,61 @@
-# Colorectal Cancer Detection using Deep Learning
+# 🧬 Colorectal Cancer Detection & Stage Prediction Using Deep Learning
 
-## Overview
-This project aims to develop a deep learning-based model for colorectal cancer detection and classification using the LC25000 dataset. The model predicts the presence of colorectal cancer and classifies its stages based on histopathological images.
+An AI-powered tool that classifies colorectal cancer stages from histopathological images using deep learning. Built with a custom CNN model and GUI using Tkinter, the system identifies whether the tissue sample is cancerous and if so, predicts the cancer stage (1 to 4) with explanations.
 
-## Dataset
-- **Name:** LC25000 Dataset
-- **Description:** Contains 25,000 labeled histopathological images of lung and colon cancer.
-- **Classes:** 
-  - Normal
-  - Benign Tumor
-  - Malignant Tumor
-  
-## Features
-- **Preprocessing:** Image resizing, normalization, and augmentation.
-- **Model Architecture:** Deep learning-based CNN models (e.g., VGG, ResNet, or a custom CNN).
-- **Training:** Using labeled images with validation and testing.
-- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score, and Confusion Matrix.
+![GUI Preview](screenshots/gui_preview.png)
 
-## Installation
-Clone the repository and install dependencies:
+---
+
+## 📁 Dataset
+
+**LC25000 Dataset**  
+- Contains histopathological images of colon tissues.
+- Used folders: `colon_n` (Normal), `colon_aca` (Malignant - Adenocarcinoma).
+- `colon_aca` folder clustered using **KMeans** into 4 stages for staging purposes.
+
+> 📌 Dataset source: [LC25000 Dataset](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images)
+
+---
+
+## 🧠 Models Used
+
+| Model Name | Architecture | Accuracy | Notes |
+|------------|--------------|----------|-------|
+| `colorectal_staging_model.h5` | Custom CNN | ✅ Trained | Used in final GUI |
+| `colon.h5` | VGG16 (Transfer Learning) | ✅ Trained | Optional |
+| `colon_resnet.h5` | ResNet50 (Transfer Learning) | ✅ Trained | Optional |
+
+---
+
+## 💻 Features
+
+- 🔍 Predicts **presence of cancer**
+- 📊 Classifies into **Stage 1 to Stage 4** if cancer is present
+- 🖼️ Displays the selected image
+- 📖 Provides **stage-wise explanations**
+- 🎨 **Stylish GUI** built using `Tkinter`
+- 📈 Accuracy graph plotted after training
+- 📂 Images organized into stage folders using **KMeans**
+
+---
+
+## 🎨 GUI Preview
+
+<img src="screenshots/gui_full.png" width="500">
+
+---
+
+## 📈 Sample Graphs
+
+| Accuracy | Loss |
+|---------|------|
+| ![Acc](screenshots/acc.png) | ![Loss](screenshots/loss.png) |
+
+---
+
+## 🚀 Installation & Running
+
+1. **Clone the repository**  
 ```bash
-git clone https://github.com/yourusername/colorectal-cancer-detection.git
-cd colorectal-cancer-detection
-pip install -r requirements.txt
-```
-
-## Usage
-Run the model training script:
-```bash
-python train.py
-```
-Run predictions on new images:
-```bash
-python predict.py --image path/to/image.jpg
-```
-
-## Results
-- Model accuracy: **XX%**
-- Precision: **XX%**
-- Recall: **XX%**
-- Confusion Matrix:
-  ![Confusion Matrix](results/confusion_matrix.png)
-
-## Future Enhancements
-- Improve accuracy with advanced architectures (e.g., Transformer-based models).
-- Implement explainability techniques (Grad-CAM, SHAP).
-- Deploy as a web app for real-time classification.
-
-## Contributing
-Feel free to submit issues or pull requests to enhance the project.
-
-## License
-This project is licensed under the MIT License.
+git clone https://github.com/yourusername/colorectal-cancer-stage-detector.git
+cd colorectal-cancer-stage-detector
