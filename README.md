@@ -59,3 +59,54 @@ An AI-powered tool that classifies colorectal cancer stages from histopathologic
 ```bash
 git clone https://github.com/yourusername/colorectal-cancer-stage-detector.git
 cd colorectal-cancer-stage-detector
+
+
+Install dependencies
+
+
+pip install -r requirements.txt
+Run GUI
+
+python gui_colorectal.py
+🧪 Project Structure
+
+├── colon.h5                  # VGG16 model
+├── colon_resnet.h5          # ResNet model
+├── colorectal_staging_model.h5  # Final CNN model
+├── gui_colorectal.py        # Tkinter GUI code
+├── model_training.ipynb     # CNN model training notebook
+├── stage_clustering.py      # KMeans clustering script
+├── Final_Dataset/           # Image dataset used for training
+├── screenshots/             # Graphs & GUI preview
+└── README.md
+🛠️ Tech Stack
+Python 3.x
+
+TensorFlow / Keras
+
+Scikit-learn
+
+OpenCV & PIL
+
+Matplotlib
+
+Tkinter
+
+🌟 Future Enhancements
+Add support for other cancer types (lung, breast)
+
+Deploy as a web app using Flask or Streamlit
+
+Use 3D CNNs for MRI scans
+
+Integrate patient history for personalized diagnosis
+
+📄 License
+This project is licensed under the MIT License.
+
+🤝 Acknowledgements
+Dataset from LC25000
+
+Keras, TensorFlow
+
+Medical research on colorectal cancer staging
